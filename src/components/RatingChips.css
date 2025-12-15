@@ -1,0 +1,34 @@
+.rating-chips {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.rating-chip {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 600;
+  color: gray;
+  cursor: pointer;
+}
+
+.rating-chip:hover:not(:disabled) {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 8px gray;
+}
+
+.rating-chip.active {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: white;
+}
+
+.rating-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
