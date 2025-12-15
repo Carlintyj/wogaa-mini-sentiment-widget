@@ -1,4 +1,4 @@
-import type { FC, ChangeEvent } from "react";
+import type { ChangeEvent } from "react";
 import "./CommentBox.css";
 
 interface CommentBoxProps {
@@ -8,12 +8,12 @@ interface CommentBoxProps {
   placeholder?: string;
 }
 
-const CommentBox: FC<CommentBoxProps> = ({
+const CommentBox = ({
   value,
   onChange,
   disabled = false,
   placeholder = "Enter your comment (optional)",
-}) => {
+}: CommentBoxProps) => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     onChange(e.target.value);
   };

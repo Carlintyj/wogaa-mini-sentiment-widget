@@ -70,4 +70,7 @@
   border-left: 4px solid #4a90e2;
   color: black;
   font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }

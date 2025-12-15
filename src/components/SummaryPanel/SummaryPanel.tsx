@@ -1,12 +1,11 @@
-import type { FC } from "react";
-import type { SummaryData } from "../types";
+import type { SummaryData } from "../../types";
 import "./SummaryPanel.css";
 
 interface SummaryPanelProps {
   summary: SummaryData;
 }
 
-const SummaryPanel: FC<SummaryPanelProps> = ({ summary }) => {
+const SummaryPanel = ({ summary }: SummaryPanelProps) => {
   const { totalSubmissions, averageRating, recentComments } = summary;
 
   if (totalSubmissions === 0) {

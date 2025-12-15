@@ -1,8 +1,8 @@
 import { useState } from "react";
-import RatingChips from "./components/RatingChips";
-import CommentBox from "./components/CommentBox";
-import SubmitButton from "./components/SubmitButton";
-import SummaryPanel from "./components/SummaryPanel";
+import RatingChips from "./components/RatingChips/RatingChips";
+import CommentBox from "./components/CommentBox/CommentBox";
+import SubmitButton from "./components/SubmitButton/SubmitButton";
+import SummaryPanel from "./components/SummaryPanel/SummaryPanel";
 import type { Submission, SummaryData } from "./types";
 import "./App.css";
 

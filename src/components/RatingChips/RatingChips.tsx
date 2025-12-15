@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import "./RatingChips.css";
 
 interface RatingChipsProps {
@@ -7,11 +6,11 @@ interface RatingChipsProps {
   disabled?: boolean;
 }
 
-const RatingChips: FC<RatingChipsProps> = ({
+const RatingChips = ({
   selectedRating,
   onRatingSelect,
   disabled = false,
-}) => {
+}: RatingChipsProps) => {
   const ratings = [1, 2, 3, 4, 5];
 
   return (

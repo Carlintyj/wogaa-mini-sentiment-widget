@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import "./SubmitButton.css";
 
 interface SubmitButtonProps {
@@ -6,7 +5,7 @@ interface SubmitButtonProps {
   disabled?: boolean;
 }
 
-const SubmitButton: FC<SubmitButtonProps> = ({ onClick, disabled = false }) => {
+const SubmitButton = ({ onClick, disabled = false }: SubmitButtonProps) => {
   return (
     <button
       className="submit-button"
