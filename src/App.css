@@ -4,22 +4,24 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: #9021a6;
+  background: var(--bg-gradient-end);
 }
 
 .widget-card {
   width: 100%;
   max-width: 600px;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 16px;
   padding: 32px;
+  box-shadow: 0 10px 40px var(--shadow-color);
+  transition: background-color 0.3s ease;
 }
 
 .widget-title {
   margin: 0 0 24px 0;
   font-size: 28px;
   font-weight: 700;
-  color: black;
+  color: var(--text-primary);
   text-align: center;
 }
 
@@ -28,13 +30,14 @@
 }
 
 .confirmation-message {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: var(--success-bg);
+  color: var(--success-text);
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 20px;
   text-align: center;
   font-weight: 600;
+  border: 1px solid var(--success-border);
 }
 
 @media (max-width: 640px) {

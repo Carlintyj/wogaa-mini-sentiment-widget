@@ -55,7 +55,8 @@ src/
 │   ├── RatingChips.tsx + .css
 │   ├── CommentBox.tsx + .css
 │   ├── SubmitButton.tsx + .css
-│   └── SummaryPanel.tsx + .css
+│   ├── SummaryPanel.tsx + .css
+│   └── ThemeToggle.tsx + .css
 ├── types.ts
 ├── App.tsx
 └── main.tsx
@@ -68,5 +69,6 @@ src/
 - Form validation (can't submit without a rating)
 - 3-second spam prevention
 - Summary showing total submissions, average rating and last 3 comments
+- Light/dark mode toggle
 
 Built with React 19, TypeScript and Vite.

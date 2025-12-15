@@ -3,6 +3,7 @@ import RatingChips from "./components/RatingChips/RatingChips";
 import CommentBox from "./components/CommentBox/CommentBox";
 import SubmitButton from "./components/SubmitButton/SubmitButton";
 import SummaryPanel from "./components/SummaryPanel/SummaryPanel";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import type { Submission, SummaryData } from "./types";
 import "./App.css";
 
@@ -12,6 +13,13 @@ function App() {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   const summaryData: SummaryData = (() => {
     if (submissions.length === 0) {
@@ -68,6 +76,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
       <div className="widget-card">
         <h1 className="widget-title">Mini Sentiment Widget</h1>
 
