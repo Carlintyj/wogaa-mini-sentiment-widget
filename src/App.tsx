@@ -5,6 +5,7 @@ import SubmitButton from "./components/SubmitButton/SubmitButton";
 import SummaryPanel from "./components/SummaryPanel/SummaryPanel";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import type { Submission, SummaryData } from "./types";
+import submitService from "./services/submitService";
 import "./App.css";
 
 function App() {
@@ -60,13 +61,18 @@ function App() {
       comment: comment.trim(),
       timestamp: new Date(),
     };
-
     setSubmissions((prev) => [...prev, newSubmission]);
     setShowConfirmation(true);
     setIsDisabled(true);
 
     setSelectedRating(null);
     setComment("");
+
+    try {
+      submitService(newSubmission);
+    } catch (error) {
+      alert("Error in submitting feedback.");
+    }
 
     setTimeout(() => {
       setIsDisabled(false);
